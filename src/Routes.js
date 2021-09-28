@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import App from "./App";
 import SingleField from "./components/SingleField";
+import SampleForm from "./components/SampleForm";
 
 const Routes = () => {
   return (
@@ -13,6 +14,9 @@ const Routes = () => {
           <li>
             <Link to="/single-field">Single Field</Link>
           </li>
+          <li>
+            <Link to="/sample-form">Sample Form</Link>
+          </li>
         </ul>
         <div>
           <Switch>
@@ -21,6 +25,9 @@ const Routes = () => {
             </Route>
             <Route path="/single-field">
               <SingleField />
+            </Route>
+            <Route path="/sample-form">
+              <SampleForm />
             </Route>
           </Switch>
         </div>
