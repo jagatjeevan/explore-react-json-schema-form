@@ -7,18 +7,19 @@ const CombinedForm = () => {
 	const [formData, setFormData] = React.useState(null);
 
 	const changeHandler = data => {
+        console.log('inside change handler', data.formData)
 		setFormData(data.formData);
 	};
 
+    const onBlurHandler = () => {
+        console.log('inside blur handler', formData)
+    }
+
 	const formProps = {
 		formData,
-		liveValidation: true,
 		widgets,
-		showErrorList: false,
 		schema,
-		onSubmit: () => {},
-		onBlur: () => {},
-		onFocus: () => {},
+		onBlur: onBlurHandler,
 		onChange: changeHandler,
 	};
 
