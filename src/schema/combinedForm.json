@@ -1,0 +1,20 @@
+{
+	"title": "Multiple form",
+	"description": "Form containing multiple components",
+	"type": "object",
+	"required": ["input1", "input2", "select1"],
+	"properties": {
+		"input1": {
+			"type": "string",
+			"title": "Input Field 1"
+		},
+		"input2": {
+			"type": "number",
+			"title": "Input Field 2"
+		},
+		"select1": {
+			"type": "string",
+			"enum": ["one", "two", "three", "four", "five"]
+		}
+	}
+}
