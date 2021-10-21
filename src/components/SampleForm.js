@@ -59,7 +59,6 @@ function SampleForm() {
 
   return (
     <>
-      <h2>Sample form</h2>
       {error && <>{error}</>}
       {focusElem && <>Focus element : {focusElem}</>}
       <Form

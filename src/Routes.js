@@ -3,6 +3,7 @@ import App from "./App";
 import CombinedForm from "./components/CombinedForm";
 import SampleForm from "./components/SampleForm";
 import SingleField from "./components/SingleField";
+import AccordionView from "./components/AccordionView";
 
 const Routes = () => {
   return (
@@ -21,6 +22,9 @@ const Routes = () => {
           <li>
             <Link to="/sample-form">Sample Form</Link>
           </li>
+          <li>
+            <Link to="/accordion-view">Accordion View</Link>
+          </li>
         </ul>
         <div>
           <Switch>
@@ -35,6 +39,9 @@ const Routes = () => {
             </Route>
             <Route path="/sample-form">
               <SampleForm />
+            </Route>
+            <Route path="/accordion-view">
+              <AccordionView />
             </Route>
           </Switch>
         </div>
