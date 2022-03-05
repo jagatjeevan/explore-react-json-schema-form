@@ -1,19 +1,48 @@
 import Form from "@rjsf/core";
 import { useState } from "react";
 
+// const schema = {
+//   title: "Test form",
+//   description: "Exploring React json schema form",
+//   type: "string",
+//   enum: ["one", "two", "three"],
+// };
+
 const schema = {
-  title: "Test form",
-  description: "Exploring React json schema form",
-  type: "string",
-  enum: ["one", "two", "three"],
+  type: "object",
+  properties: {
+    name: {
+      type: "string",
+    },
+    age: {
+      type: "number",
+    },
+  },
+  additionalProperties: {
+    type: "array",
+    items: {
+      type: "string",
+    },
+  },
 };
 
 const uiSchema = {
-  classNames: "custom-css-class",
+  items: {
+    "ui:widget": "textarea",
+  },
+  "ui:options": {
+    orderable: false,
+    addable: false,
+    removable: false,
+  },
 };
 
+// const uiSchema = {
+//   classNames: "custom-css-class",
+// };
+
 function SingleField() {
-  const [formData, setFormData] = useState("one");
+  const [formData, setFormData] = useState(null);
 
   const onSubmit = (e) => {
     console.log(e);
